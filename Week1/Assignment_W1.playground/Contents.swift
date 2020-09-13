@@ -4,9 +4,9 @@ import UIKit
 
 // Basic
 
-// 1. In swift, we usually define a variable through the syntax as below: ​var ​x: I​n t​= ​10  When calculating circle’s area, we use the formula: ​ 2 * radius * Pi​ to get area. Now, please define a variable ​ Pi ​ and assign a value to it. You can refer to the syntax above while do think about using ​ var ​ or ​ let ​ and which data type it should be.
+// 1. In swift, we usually define a variable through the syntax as below: ​var ​x: I​n t​= ​10  When calculating circle’s area, we use the formula: 2 * radius * Pi​ to get area. Now, please define a variable Pi and assign a value to it. You can refer to the syntax above while do think about using var or let​ and which data type it should be.
 
-    var Pi: Double = 3.14159265
+    var Pi: Double = 3.141592654 // Because Pi is an irrational number (a decimal with no end and no repeating pattern), so I think that 'var' and 'Double' would be a better choice.
 
 
 // 2. Create two constants x and y of type ​Int​ then assign any value to them. After that, please calculate the average of x and y and store the result in a constant named average.
@@ -52,7 +52,7 @@ import UIKit
 
     let a = 10
     let b = 3
-    let remain = a - b
+    let remain = a % b
 
 
 // 8. Please explain the difference between​ ​let​ and​ ​var​.
@@ -159,51 +159,54 @@ import UIKit
 // 1. Here is an array: let​ lottoNumbers = [1​0,​ 9​​, 8​,​ ​7,​ 6​​, 5​] Please use For-Loop and Range to print the last three members in the ​lottoNumbers array.
 
     let lottoNumbers = [10, 9, 8, 7, 6, 5]
+    let range = (lottoNumbers.count - 3)...(lottoNumbers.count - 1)
 
-    for i in 1...3 {
-        print(lottoNumbers[lottoNumbers.count - i])
+    for i in range {
+        print(lottoNumbers[i])
     }
 
 
 // 2. Please use swift syntax to get the result as images list below: Please find a method which can help us complete these requirements.
 
-    for number in 5...10 {
+    for number in lottoNumbers.reversed() {
         print(number)
     }
 
-    for number in stride(from: 0, through: 4, by: 2) {
-        print(10 - number)
+    for number in lottoNumbers {
+        if number % 2 == 0 {
+            print(number)
+        }
     }
 
 
 // 3. Please use while loop to solve above question.
 
-    var n = 5
-    while n <= 10 {
-        print(n)
-        n += 1
+    var n = lottoNumbers.count - 1
+    while n >= 0 {
+        print(lottoNumbers[n])
+        n -= 1
     }
 
-    n = 10
-    while n >= 6 {
-        print(n)
-        n -= 2
+    n = 0
+    while n < lottoNumbers.count {
+        print(lottoNumbers[n])
+        n += 2
     }
 
 
 // 4. Please use repeat-while loop to solve question 2.
 
-    n = 5
+    n = lottoNumbers.count - 1
     repeat {
-        print(n)
-        n += 1
-    } while n <= 10
+        print(lottoNumbers[n])
+        n -= 1
+    } while n >= 0
 
-    n = 10
+    n = 0
     repeat {
-        print(n)
-        n -= 2
-    } while n >= 6
+        print(lottoNumbers[n])
+        n += 2
+    } while n < lottoNumbers.count
 
 
 // 5. What are the differences between while and repeat-while?
