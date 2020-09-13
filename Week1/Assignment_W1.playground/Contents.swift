@@ -6,7 +6,7 @@ import UIKit
 
 // 1. In swift, we usually define a variable through the syntax as below: ​var ​x: I​n t​= ​10  When calculating circle’s area, we use the formula: 2 * radius * Pi​ to get area. Now, please define a variable Pi and assign a value to it. You can refer to the syntax above while do think about using var or let​ and which data type it should be.
 
-    var Pi: Double = 3.141592654 // Because Pi is an irrational number (a decimal with no end and no repeating pattern), so I think that 'var' and 'Double' would be a better choice.
+    let Pi: Double = 3.141592654 // Although Pi is an irrational number (a decimal with no end and no repeating pattern), it's still a constant. So I think that 'let' and 'Double' would be a better choice.
 
 
 // 2. Create two constants x and y of type ​Int​ then assign any value to them. After that, please calculate the average of x and y and store the result in a constant named average.
