@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lightGreen" translatesAutoresizingMaskIntoConstraints="NO" id="RPZ-yv-jcb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-bV-g3R">
+                                <rect key="frame" x="40" y="220" width="295" height="19.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEY-MQ-w0a">
+                                <rect key="frame" x="40" y="567" width="295" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XzU-9h-ZZG"/>
+                                    <constraint firstAttribute="width" constant="295" id="dD7-CW-WV3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <state key="normal" title="Show Another Fun Fact">
+                                    <color key="titleColor" red="0.41982984540000001" green="0.72670978310000001" blue="0.71173471210000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnotherFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmB-wG-Ok7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-Bi-Kvu">
+                                <rect key="frame" x="40" y="100" width="106" height="20"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BEY-MQ-w0a" secondAttribute="trailing" constant="40" id="3tD-Np-cDf"/>
+                            <constraint firstItem="vxa-bV-g3R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YWO-iy-09L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vxa-bV-g3R" secondAttribute="trailing" constant="40" id="bHK-wp-bE2"/>
+                            <constraint firstItem="GV6-Bi-Kvu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="k3V-M5-sjr"/>
+                            <constraint firstItem="vxa-bV-g3R" firstAttribute="top" secondItem="GV6-Bi-Kvu" secondAttribute="bottom" constant="100" id="mOi-PH-xiK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BEY-MQ-w0a" secondAttribute="bottom" constant="50" id="nao-2c-J4n"/>
+                            <constraint firstItem="BEY-MQ-w0a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="tC4-dE-DE7"/>
+                            <constraint firstItem="GV6-Bi-Kvu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="xid-nP-PLu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonTitleColor" destination="BEY-MQ-w0a" id="ifP-sU-RJ8"/>
+                        <outlet property="textLabel" destination="vxa-bV-g3R" id="oum-NG-mKi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="109.29535232383809"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lightGreen" width="544" height="700"/>
+    </resources>
+</document>
